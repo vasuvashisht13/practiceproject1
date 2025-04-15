@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { json } from 'stream/consumers';
+import ApiJson from "../testdata/apidata.json";
+
 
 test('api testing put request', async ({ request }) => {
     const respPut = await request.put("https://restful-booker.herokuapp.com/booking/1", {
@@ -7,33 +8,16 @@ test('api testing put request', async ({ request }) => {
             'Authorization': 'Basic YWRtaW46cGFzc3dvcmQxMjM=',
             'Content-Type': 'application/json'
         },
-        data: {
-            firstname: "Vasu",
-            lastname: "Vashisht",
-            totalprice: 999,
-            depositpaid: true,
-            bookingdates: {
-                checkin: "2018-01-01",
-                checkout: "2019-01-01"
-            },
-            additionalneeds: "Breakfast"
-        }
+        data: ApiJson.putcalldata
     });
 
     expect(respPut.status()).toBe(200);
     const jsonresp = await respPut.json();
     console.log(jsonresp);
     expect(respPut.ok()).toBeTruthy();
-    expect(jsonresp).toMatchObject({
-        firstname: 'Vasu',
-        lastname: 'Vashisht',
-        totalprice: 999,
-        depositpaid: true,
-        bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
-        additionalneeds: 'Breakfast'
-      })
+    expect(jsonresp).toMatchObject(ApiJson.putcalldata)
 
-      expect(jsonresp.additionalneeds).toEqual('Breakfast');
+      expect(jsonresp.additionalneeds).toEqual(ApiJson.putcalldata.additionalneeds);
 
 });
 
@@ -42,12 +26,5 @@ test('api get request to verify data', async({request}) =>{
     const jsondata = await respget.json();
     console.log(jsondata);
 
-    expect(jsondata).toMatchObject({
-        firstname: 'Vasu',
-        lastname: 'Vashisht',
-        totalprice: 999,
-        depositpaid: true,
-        bookingdates: { checkin: '2018-01-01', checkout: '2019-01-01' },
-        additionalneeds: 'Breakfast'
-      })
+    expect(jsondata).toMatchObject(ApiJson.putcalldata);
 })
