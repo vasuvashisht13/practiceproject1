@@ -1,0 +1,21 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.320459999999962">
+<testsuite name="put.spec.ts" timestamp="2025-04-14T11:53:35.711Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.879" errors="0">
+<testcase name="api testing put request" classname="put.spec.ts" time="1.879">
+<system-out>
+<![CDATA[{
+  firstname: [32m'Vasu'[39m,
+  lastname: [32m'Vashisht'[39m,
+  totalprice: [33m999[39m,
+  depositpaid: [33mtrue[39m,
+  bookingdates: { checkin: [32m'2018-01-01'[39m, checkout: [32m'2019-01-01'[39m },
+  additionalneeds: [32m'Breakfast'[39m
+}
+]]>
+</system-out>
+<system-err>
+<![CDATA[
+Warning: attachment put-api-testing-put-request-chromium\trace.zip is missing]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>
