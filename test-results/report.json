@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "reporter": [
@@ -43,9 +43,9 @@
       {
         "outputDir": "C:/Users/vvashisht/Desktop/Projects/practiceproject/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 2,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "chromium",
         "name": "chromium",
@@ -59,7 +59,7 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.51.0",
     "workers": 4,
     "webServer": null
@@ -87,7 +87,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1879,
+                  "duration": 1145,
                   "errors": [],
                   "stdout": [
                     {
@@ -96,7 +96,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-04-14T11:53:36.834Z",
+                  "startTime": "2025-04-15T08:37:58.739Z",
                   "attachments": [
                     {
                       "name": "trace",
@@ -111,7 +111,105 @@
           ],
           "id": "968e71d78a22728f58bf-3dcb3dd99d198e2ececf",
           "file": "put.spec.ts",
-          "line": 3,
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "api get request to verify data",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1131,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 7\u001b[39m\n\u001b[31m+ Received  + 6\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"additionalneeds\": \"Breakfast\",\u001b[39m\n\u001b[2m    \"bookingdates\": Object {\u001b[22m\n\u001b[32m-     \"checkin\": \"2018-01-01\",\u001b[39m\n\u001b[32m-     \"checkout\": \"2019-01-01\",\u001b[39m\n\u001b[31m+     \"checkin\": \"2019-08-12\",\u001b[39m\n\u001b[31m+     \"checkout\": \"2021-03-11\",\u001b[39m\n\u001b[2m    },\u001b[22m\n\u001b[32m-   \"depositpaid\": true,\u001b[39m\n\u001b[32m-   \"firstname\": \"Vasu\",\u001b[39m\n\u001b[32m-   \"lastname\": \"Vashisht\",\u001b[39m\n\u001b[32m-   \"totalprice\": 999,\u001b[39m\n\u001b[31m+   \"depositpaid\": false,\u001b[39m\n\u001b[31m+   \"firstname\": \"Eric\",\u001b[39m\n\u001b[31m+   \"lastname\": \"Brown\",\u001b[39m\n\u001b[31m+   \"totalprice\": 208,\u001b[39m\n\u001b[2m  }\u001b[22m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 7\u001b[39m\n\u001b[31m+ Received  + 6\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"additionalneeds\": \"Breakfast\",\u001b[39m\n\u001b[2m    \"bookingdates\": Object {\u001b[22m\n\u001b[32m-     \"checkin\": \"2018-01-01\",\u001b[39m\n\u001b[32m-     \"checkout\": \"2019-01-01\",\u001b[39m\n\u001b[31m+     \"checkin\": \"2019-08-12\",\u001b[39m\n\u001b[31m+     \"checkout\": \"2021-03-11\",\u001b[39m\n\u001b[2m    },\u001b[22m\n\u001b[32m-   \"depositpaid\": true,\u001b[39m\n\u001b[32m-   \"firstname\": \"Vasu\",\u001b[39m\n\u001b[32m-   \"lastname\": \"Vashisht\",\u001b[39m\n\u001b[32m-   \"totalprice\": 999,\u001b[39m\n\u001b[31m+   \"depositpaid\": false,\u001b[39m\n\u001b[31m+   \"firstname\": \"Eric\",\u001b[39m\n\u001b[31m+   \"lastname\": \"Brown\",\u001b[39m\n\u001b[31m+   \"totalprice\": 208,\u001b[39m\n\u001b[2m  }\u001b[22m\n    at C:\\Users\\vvashisht\\Desktop\\Projects\\practiceproject\\tests\\put.spec.ts:45:22",
+                    "matcherResult": {
+                      "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 7\u001b[39m\n\u001b[31m+ Received  + 6\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"additionalneeds\": \"Breakfast\",\u001b[39m\n\u001b[2m    \"bookingdates\": Object {\u001b[22m\n\u001b[32m-     \"checkin\": \"2018-01-01\",\u001b[39m\n\u001b[32m-     \"checkout\": \"2019-01-01\",\u001b[39m\n\u001b[31m+     \"checkin\": \"2019-08-12\",\u001b[39m\n\u001b[31m+     \"checkout\": \"2021-03-11\",\u001b[39m\n\u001b[2m    },\u001b[22m\n\u001b[32m-   \"depositpaid\": true,\u001b[39m\n\u001b[32m-   \"firstname\": \"Vasu\",\u001b[39m\n\u001b[32m-   \"lastname\": \"Vashisht\",\u001b[39m\n\u001b[32m-   \"totalprice\": 999,\u001b[39m\n\u001b[31m+   \"depositpaid\": false,\u001b[39m\n\u001b[31m+   \"firstname\": \"Eric\",\u001b[39m\n\u001b[31m+   \"lastname\": \"Brown\",\u001b[39m\n\u001b[31m+   \"totalprice\": 208,\u001b[39m\n\u001b[2m  }\u001b[22m",
+                      "pass": false
+                    },
+                    "location": {
+                      "file": "C:\\Users\\vvashisht\\Desktop\\Projects\\practiceproject\\tests\\put.spec.ts",
+                      "column": 22,
+                      "line": 45
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(jsondata)\u001b[33m;\u001b[39m\n \u001b[90m 44 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     expect(jsondata)\u001b[33m.\u001b[39mtoMatchObject({\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m         firstname\u001b[33m:\u001b[39m \u001b[32m'Vasu'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 47 |\u001b[39m         lastname\u001b[33m:\u001b[39m \u001b[32m'Vashisht'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 48 |\u001b[39m         totalprice\u001b[33m:\u001b[39m \u001b[35m999\u001b[39m\u001b[33m,\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\vvashisht\\Desktop\\Projects\\practiceproject\\tests\\put.spec.ts",
+                        "column": 22,
+                        "line": 45
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoMatchObject\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\n\u001b[32m- Expected  - 7\u001b[39m\n\u001b[31m+ Received  + 6\u001b[39m\n\n\u001b[2m  Object {\u001b[22m\n\u001b[32m-   \"additionalneeds\": \"Breakfast\",\u001b[39m\n\u001b[2m    \"bookingdates\": Object {\u001b[22m\n\u001b[32m-     \"checkin\": \"2018-01-01\",\u001b[39m\n\u001b[32m-     \"checkout\": \"2019-01-01\",\u001b[39m\n\u001b[31m+     \"checkin\": \"2019-08-12\",\u001b[39m\n\u001b[31m+     \"checkout\": \"2021-03-11\",\u001b[39m\n\u001b[2m    },\u001b[22m\n\u001b[32m-   \"depositpaid\": true,\u001b[39m\n\u001b[32m-   \"firstname\": \"Vasu\",\u001b[39m\n\u001b[32m-   \"lastname\": \"Vashisht\",\u001b[39m\n\u001b[32m-   \"totalprice\": 999,\u001b[39m\n\u001b[31m+   \"depositpaid\": false,\u001b[39m\n\u001b[31m+   \"firstname\": \"Eric\",\u001b[39m\n\u001b[31m+   \"lastname\": \"Brown\",\u001b[39m\n\u001b[31m+   \"totalprice\": 208,\u001b[39m\n\u001b[2m  }\u001b[22m\n\n\u001b[0m \u001b[90m 43 |\u001b[39m     console\u001b[33m.\u001b[39mlog(jsondata)\u001b[33m;\u001b[39m\n \u001b[90m 44 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 45 |\u001b[39m     expect(jsondata)\u001b[33m.\u001b[39mtoMatchObject({\n \u001b[90m    |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 46 |\u001b[39m         firstname\u001b[33m:\u001b[39m \u001b[32m'Vasu'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 47 |\u001b[39m         lastname\u001b[33m:\u001b[39m \u001b[32m'Vashisht'\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 48 |\u001b[39m         totalprice\u001b[33m:\u001b[39m \u001b[35m999\u001b[39m\u001b[33m,\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\vvashisht\\Desktop\\Projects\\practiceproject\\tests\\put.spec.ts:45:22\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "{\n  firstname: \u001b[32m'Eric'\u001b[39m,\n  lastname: \u001b[32m'Brown'\u001b[39m,\n  totalprice: \u001b[33m208\u001b[39m,\n  depositpaid: \u001b[33mfalse\u001b[39m,\n  bookingdates: { checkin: \u001b[32m'2019-08-12'\u001b[39m, checkout: \u001b[32m'2021-03-11'\u001b[39m }\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-04-15T08:37:58.738Z",
+                  "attachments": [
+                    {
+                      "name": "_prompt-0",
+                      "contentType": "text/markdown",
+                      "body": "IyBJbnN0cnVjdGlvbnMKCi0gRm9sbG93aW5nIFBsYXl3cmlnaHQgdGVzdCBmYWlsZWQuCi0gRXhwbGFpbiB3aHksIGJlIGNvbmNpc2UsIHJlc3BlY3QgUGxheXdyaWdodCBiZXN0IHByYWN0aWNlcy4KLSBQcm92aWRlIGEgc25pcHBldCBvZiBjb2RlIHdpdGggdGhlIGZpeCwgaWYgcG9zc2libGUuCgojIFRlc3QgaW5mbwoKLSBOYW1lOiBhcGkgZ2V0IHJlcXVlc3QgdG8gdmVyaWZ5IGRhdGEKLSBMb2NhdGlvbjogQzpcVXNlcnNcdnZhc2hpc2h0XERlc2t0b3BcUHJvamVjdHNccHJhY3RpY2Vwcm9qZWN0XHRlc3RzXHB1dC5zcGVjLnRzOjQwOjUKCiMgRXJyb3IgZGV0YWlscwoKYGBgCkVycm9yOiBleHBlY3QocmVjZWl2ZWQpLnRvTWF0Y2hPYmplY3QoZXhwZWN0ZWQpCgotIEV4cGVjdGVkICAtIDcKKyBSZWNlaXZlZCAgKyA2CgogIE9iamVjdCB7Ci0gICAiYWRkaXRpb25hbG5lZWRzIjogIkJyZWFrZmFzdCIsCiAgICAiYm9va2luZ2RhdGVzIjogT2JqZWN0IHsKLSAgICAgImNoZWNraW4iOiAiMjAxOC0wMS0wMSIsCi0gICAgICJjaGVja291dCI6ICIyMDE5LTAxLTAxIiwKKyAgICAgImNoZWNraW4iOiAiMjAxOS0wOC0xMiIsCisgICAgICJjaGVja291dCI6ICIyMDIxLTAzLTExIiwKICAgIH0sCi0gICAiZGVwb3NpdHBhaWQiOiB0cnVlLAotICAgImZpcnN0bmFtZSI6ICJWYXN1IiwKLSAgICJsYXN0bmFtZSI6ICJWYXNoaXNodCIsCi0gICAidG90YWxwcmljZSI6IDk5OSwKKyAgICJkZXBvc2l0cGFpZCI6IGZhbHNlLAorICAgImZpcnN0bmFtZSI6ICJFcmljIiwKKyAgICJsYXN0bmFtZSI6ICJCcm93biIsCisgICAidG90YWxwcmljZSI6IDIwOCwKICB9CiAgICBhdCBDOlxVc2Vyc1x2dmFzaGlzaHRcRGVza3RvcFxQcm9qZWN0c1xwcmFjdGljZXByb2plY3RcdGVzdHNccHV0LnNwZWMudHM6NDU6MjIKYGBgCgojIFRlc3Qgc291cmNlCgpgYGB0cwogICAxIHwgaW1wb3J0IHsgdGVzdCwgZXhwZWN0IH0gZnJvbSAnQHBsYXl3cmlnaHQvdGVzdCc7CiAgIDIgfCBpbXBvcnQgeyBqc29uIH0gZnJvbSAnc3RyZWFtL2NvbnN1bWVycyc7CiAgIDMgfAogICA0IHwgdGVzdCgnYXBpIHRlc3RpbmcgcHV0IHJlcXVlc3QnLCBhc3luYyAoeyByZXF1ZXN0IH0pID0+IHsKICAgNSB8ICAgICBjb25zdCByZXNwUHV0ID0gYXdhaXQgcmVxdWVzdC5wdXQoImh0dHBzOi8vcmVzdGZ1bC1ib29rZXIuaGVyb2t1YXBwLmNvbS9ib29raW5nLzEiLCB7CiAgIDYgfCAgICAgICAgIGhlYWRlcnM6IHsKICAgNyB8ICAgICAgICAgICAgICdBdXRob3JpemF0aW9uJzogJ0Jhc2ljIFlXUnRhVzQ2Y0dGemMzZHZjbVF4TWpNPScsCiAgIDggfCAgICAgICAgICAgICAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nCiAgIDkgfCAgICAgICAgIH0sCiAgMTAgfCAgICAgICAgIGRhdGE6IHsKICAxMSB8ICAgICAgICAgICAgIGZpcnN0bmFtZTogIlZhc3UiLAogIDEyIHwgICAgICAgICAgICAgbGFzdG5hbWU6ICJWYXNoaXNodCIsCiAgMTMgfCAgICAgICAgICAgICB0b3RhbHByaWNlOiA5OTksCiAgMTQgfCAgICAgICAgICAgICBkZXBvc2l0cGFpZDogdHJ1ZSwKICAxNSB8ICAgICAgICAgICAgIGJvb2tpbmdkYXRlczogewogIDE2IHwgICAgICAgICAgICAgICAgIGNoZWNraW46ICIyMDE4LTAxLTAxIiwKICAxNyB8ICAgICAgICAgICAgICAgICBjaGVja291dDogIjIwMTktMDEtMDEiCiAgMTggfCAgICAgICAgICAgICB9LAogIDE5IHwgICAgICAgICAgICAgYWRkaXRpb25hbG5lZWRzOiAiQnJlYWtmYXN0IgogIDIwIHwgICAgICAgICB9CiAgMjEgfCAgICAgfSk7CiAgMjIgfAogIDIzIHwgICAgIGV4cGVjdChyZXNwUHV0LnN0YXR1cygpKS50b0JlKDIwMCk7CiAgMjQgfCAgICAgY29uc3QganNvbnJlc3AgPSBhd2FpdCByZXNwUHV0Lmpzb24oKTsKICAyNSB8ICAgICBjb25zb2xlLmxvZyhqc29ucmVzcCk7CiAgMjYgfCAgICAgZXhwZWN0KHJlc3BQdXQub2soKSkudG9CZVRydXRoeSgpOwogIDI3IHwgICAgIGV4cGVjdChqc29ucmVzcCkudG9NYXRjaE9iamVjdCh7CiAgMjggfCAgICAgICAgIGZpcnN0bmFtZTogJ1Zhc3UnLAogIDI5IHwgICAgICAgICBsYXN0bmFtZTogJ1Zhc2hpc2h0JywKICAzMCB8ICAgICAgICAgdG90YWxwcmljZTogOTk5LAogIDMxIHwgICAgICAgICBkZXBvc2l0cGFpZDogdHJ1ZSwKICAzMiB8ICAgICAgICAgYm9va2luZ2RhdGVzOiB7IGNoZWNraW46ICcyMDE4LTAxLTAxJywgY2hlY2tvdXQ6ICcyMDE5LTAxLTAxJyB9LAogIDMzIHwgICAgICAgICBhZGRpdGlvbmFsbmVlZHM6ICdCcmVha2Zhc3QnCiAgMzQgfCAgICAgICB9KQogIDM1IHwKICAzNiB8ICAgICAgIGV4cGVjdChqc29ucmVzcC5hZGRpdGlvbmFsbmVlZHMpLnRvRXF1YWwoJ0JyZWFrZmFzdCcpOwogIDM3IHwKICAzOCB8IH0pOwogIDM5IHwKICA0MCB8IHRlc3QoJ2FwaSBnZXQgcmVxdWVzdCB0byB2ZXJpZnkgZGF0YScsIGFzeW5jKHtyZXF1ZXN0fSkgPT57CiAgNDEgfCAgICAgY29uc3QgcmVzcGdldCA9IGF3YWl0IHJlcXVlc3QuZ2V0KCdodHRwczovL3Jlc3RmdWwtYm9va2VyLmhlcm9rdWFwcC5jb20vYm9va2luZy8xJyk7CiAgNDIgfCAgICAgY29uc3QganNvbmRhdGEgPSBhd2FpdCByZXNwZ2V0Lmpzb24oKTsKICA0MyB8ICAgICBjb25zb2xlLmxvZyhqc29uZGF0YSk7CiAgNDQgfAo+IDQ1IHwgICAgIGV4cGVjdChqc29uZGF0YSkudG9NYXRjaE9iamVjdCh7CiAgICAgfCAgICAgICAgICAgICAgICAgICAgICBeIEVycm9yOiBleHBlY3QocmVjZWl2ZWQpLnRvTWF0Y2hPYmplY3QoZXhwZWN0ZWQpCiAgNDYgfCAgICAgICAgIGZpcnN0bmFtZTogJ1Zhc3UnLAogIDQ3IHwgICAgICAgICBsYXN0bmFtZTogJ1Zhc2hpc2h0JywKICA0OCB8ICAgICAgICAgdG90YWxwcmljZTogOTk5LAogIDQ5IHwgICAgICAgICBkZXBvc2l0cGFpZDogdHJ1ZSwKICA1MCB8ICAgICAgICAgYm9va2luZ2RhdGVzOiB7IGNoZWNraW46ICcyMDE4LTAxLTAxJywgY2hlY2tvdXQ6ICcyMDE5LTAxLTAxJyB9LAogIDUxIHwgICAgICAgICBhZGRpdGlvbmFsbmVlZHM6ICdCcmVha2Zhc3QnCiAgNTIgfCAgICAgICB9KQogIDUzIHwgfSkKICA1NCB8CmBgYA=="
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\vvashisht\\Desktop\\Projects\\practiceproject\\test-results\\put-api-get-request-to-verify-data-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\vvashisht\\Desktop\\Projects\\practiceproject\\tests\\put.spec.ts",
+                    "column": 22,
+                    "line": 45
+                  }
+                },
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 1048,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "{\n  firstname: \u001b[32m'Vasu'\u001b[39m,\n  lastname: \u001b[32m'Vashisht'\u001b[39m,\n  totalprice: \u001b[33m999\u001b[39m,\n  depositpaid: \u001b[33mtrue\u001b[39m,\n  bookingdates: { checkin: \u001b[32m'2018-01-01'\u001b[39m, checkout: \u001b[32m'2019-01-01'\u001b[39m },\n  additionalneeds: \u001b[32m'Breakfast'\u001b[39m\n}\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-04-15T08:38:00.995Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\vvashisht\\Desktop\\Projects\\practiceproject\\test-results\\put-api-get-request-to-verify-data-chromium-retry1\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "968e71d78a22728f58bf-ff2feaa5b472e5d8bdcc",
+          "file": "put.spec.ts",
+          "line": 40,
           "column": 5
         }
       ]
@@ -119,11 +217,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-04-14T11:53:34.488Z",
-    "duration": 4320.459999999963,
+    "startTime": "2025-04-15T08:37:57.577Z",
+    "duration": 4548.818,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
-    "flaky": 0
+    "flaky": 1
   }
 }

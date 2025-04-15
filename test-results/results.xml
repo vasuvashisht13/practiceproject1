@@ -1,6 +1,6 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.320459999999962">
-<testsuite name="put.spec.ts" timestamp="2025-04-14T11:53:35.711Z" hostname="chromium" tests="1" failures="0" skipped="0" time="1.879" errors="0">
-<testcase name="api testing put request" classname="put.spec.ts" time="1.879">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="4.548818">
+<testsuite name="put.spec.ts" timestamp="2025-04-15T08:37:57.602Z" hostname="chromium" tests="2" failures="0" skipped="0" time="3.324" errors="0">
+<testcase name="api testing put request" classname="put.spec.ts" time="1.145">
 <system-out>
 <![CDATA[{
   firstname: [32m'Vasu'[39m,
@@ -15,6 +15,31 @@
 <system-err>
 <![CDATA[
 Warning: attachment put-api-testing-put-request-chromium\trace.zip is missing]]>
+</system-err>
+</testcase>
+<testcase name="api get request to verify data" classname="put.spec.ts" time="2.179">
+<system-out>
+<![CDATA[{
+  firstname: [32m'Eric'[39m,
+  lastname: [32m'Brown'[39m,
+  totalprice: [33m208[39m,
+  depositpaid: [33mfalse[39m,
+  bookingdates: { checkin: [32m'2019-08-12'[39m, checkout: [32m'2021-03-11'[39m }
+}
+{
+  firstname: [32m'Vasu'[39m,
+  lastname: [32m'Vashisht'[39m,
+  totalprice: [33m999[39m,
+  depositpaid: [33mtrue[39m,
+  bookingdates: { checkin: [32m'2018-01-01'[39m, checkout: [32m'2019-01-01'[39m },
+  additionalneeds: [32m'Breakfast'[39m
+}
+]]>
+</system-out>
+<system-err>
+<![CDATA[
+Warning: attachment put-api-get-request-to-verify-data-chromium\trace.zip is missing
+Warning: attachment put-api-get-request-to-verify-data-chromium-retry1\trace.zip is missing]]>
 </system-err>
 </testcase>
 </testsuite>
