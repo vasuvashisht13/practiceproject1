@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "reporter": [
@@ -43,9 +43,9 @@
       {
         "outputDir": "C:/Users/vvashisht/Desktop/Projects/practiceproject/test-results",
         "repeatEach": 1,
-        "retries": 2,
+        "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 1
         },
         "id": "chromium",
         "name": "chromium",
@@ -59,63 +59,20 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "patch",
+    "updateSourceMethod": "3way",
     "version": "1.51.0",
     "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-      "title": "put.spec.ts",
-      "file": "put.spec.ts",
+      "title": "responseheaderverification.spec.ts",
+      "file": "responseheaderverification.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "api testing put request",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1154,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "{\n  firstname: \u001b[32m'Vasu'\u001b[39m,\n  lastname: \u001b[32m'Vashisht'\u001b[39m,\n  totalprice: \u001b[33m999\u001b[39m,\n  depositpaid: \u001b[33mtrue\u001b[39m,\n  bookingdates: { checkin: \u001b[32m'2018-01-01'\u001b[39m, checkout: \u001b[32m'2019-01-01'\u001b[39m },\n  additionalneeds: \u001b[32m'Breakfast'\u001b[39m\n}\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-04-15T11:35:50.463Z",
-                  "attachments": [
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "C:\\Users\\vvashisht\\Desktop\\Projects\\practiceproject\\test-results\\put-api-testing-put-request-chromium\\trace.zip"
-                    }
-                  ]
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "968e71d78a22728f58bf-3dcb3dd99d198e2ececf",
-          "file": "put.spec.ts",
-          "line": 5,
-          "column": 5
-        },
-        {
-          "title": "api get request to verify data",
+          "title": "fetch and validate response header",
           "ok": true,
           "tags": [],
           "tests": [
@@ -128,23 +85,23 @@
               "results": [
                 {
                   "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1144,
+                  "duration": 1134,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "{\n  firstname: \u001b[32m'Vasu'\u001b[39m,\n  lastname: \u001b[32m'Vashisht'\u001b[39m,\n  totalprice: \u001b[33m999\u001b[39m,\n  depositpaid: \u001b[33mtrue\u001b[39m,\n  bookingdates: { checkin: \u001b[32m'2018-01-01'\u001b[39m, checkout: \u001b[32m'2019-01-01'\u001b[39m },\n  additionalneeds: \u001b[32m'Breakfast'\u001b[39m\n}\n"
+                      "text": "{\n  server: \u001b[32m'Cowboy'\u001b[39m,\n  \u001b[32m'report-to'\u001b[39m: \u001b[32m'{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1744805794&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=Unt5KD1pBzS6%2Fg%2Bnv0L7GYAUk9rhRcA8dNpPMnlRSMY%3D\"}]}'\u001b[39m,\n  \u001b[32m'reporting-endpoints'\u001b[39m: \u001b[32m'heroku-nel=https://nel.heroku.com/reports?ts=1744805794&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=Unt5KD1pBzS6%2Fg%2Bnv0L7GYAUk9rhRcA8dNpPMnlRSMY%3D'\u001b[39m,\n  nel: \u001b[32m'{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}'\u001b[39m,\n  connection: \u001b[32m'keep-alive'\u001b[39m,\n  \u001b[32m'x-powered-by'\u001b[39m: \u001b[32m'Express'\u001b[39m,\n  \u001b[32m'content-type'\u001b[39m: \u001b[32m'text/plain; charset=utf-8'\u001b[39m,\n  \u001b[32m'content-length'\u001b[39m: \u001b[32m'9'\u001b[39m,\n  etag: \u001b[32m'W/\"9-0gXL1ngzMqISxa6S1zx3F4wtLyg\"'\u001b[39m,\n  date: \u001b[32m'Wed, 16 Apr 2025 12:16:34 GMT'\u001b[39m,\n  via: \u001b[32m'1.1 vegur'\u001b[39m\n}\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-04-15T11:35:50.472Z",
+                  "startTime": "2025-04-16T12:16:33.458Z",
                   "attachments": [
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\vvashisht\\Desktop\\Projects\\practiceproject\\test-results\\put-api-get-request-to-verify-data-chromium\\trace.zip"
+                      "path": "C:\\Users\\vvashisht\\Desktop\\Projects\\practiceproject\\test-results\\responseheaderverification-1b52e-nd-validate-response-header-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -152,9 +109,9 @@
               "status": "expected"
             }
           ],
-          "id": "968e71d78a22728f58bf-ff2feaa5b472e5d8bdcc",
-          "file": "put.spec.ts",
-          "line": 24,
+          "id": "99991e6185a0803d5e98-250c3f23e8d07502b10b",
+          "file": "responseheaderverification.spec.ts",
+          "line": 3,
           "column": 5
         }
       ]
@@ -162,9 +119,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-04-15T11:35:49.258Z",
-    "duration": 2447.451,
-    "expected": 2,
+    "startTime": "2025-04-16T12:16:31.352Z",
+    "duration": 3293.80700000003,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
