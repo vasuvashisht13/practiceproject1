@@ -43,7 +43,7 @@
       {
         "outputDir": "C:/Users/vvashisht/Desktop/Projects/practiceproject/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 2,
         "metadata": {
           "actualWorkers": 1
         },
@@ -59,20 +59,20 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.51.0",
     "workers": 4,
     "webServer": null
   },
   "suites": [
     {
-      "title": "responseheaderverification.spec.ts",
-      "file": "responseheaderverification.spec.ts",
+      "title": "auth_api.spec.ts",
+      "file": "auth_api.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "fetch and validate response header",
+          "title": "authentication of put call using basic auth",
           "ok": true,
           "tags": [],
           "tests": [
@@ -84,63 +84,20 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 2,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 1177,
+                  "duration": 267,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "{\n  server: \u001b[32m'Cowboy'\u001b[39m,\n  \u001b[32m'report-to'\u001b[39m: \u001b[32m'{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1744869612&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=yqXP9r4f%2FC1bqLDoxZsZ0FTsboIrR9tZpgNfBhDAe78%3D\"}]}'\u001b[39m,\n  \u001b[32m'reporting-endpoints'\u001b[39m: \u001b[32m'heroku-nel=https://nel.heroku.com/reports?ts=1744869612&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=yqXP9r4f%2FC1bqLDoxZsZ0FTsboIrR9tZpgNfBhDAe78%3D'\u001b[39m,\n  nel: \u001b[32m'{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}'\u001b[39m,\n  connection: \u001b[32m'keep-alive'\u001b[39m,\n  \u001b[32m'x-powered-by'\u001b[39m: \u001b[32m'Express'\u001b[39m,\n  \u001b[32m'content-type'\u001b[39m: \u001b[32m'application/json; charset=utf-8'\u001b[39m,\n  \u001b[32m'content-length'\u001b[39m: \u001b[32m'140'\u001b[39m,\n  etag: \u001b[32m'W/\"8c-m2wM1ccJXVL9o9PXShPWX5oQLyg\"'\u001b[39m,\n  date: \u001b[32m'Thu, 17 Apr 2025 06:00:12 GMT'\u001b[39m,\n  via: \u001b[32m'1.1 vegur'\u001b[39m\n}\n"
-                    },
-                    {
-                      "text": "*****************************************\n"
-                    },
-                    {
-                      "text": "[\n  { name: \u001b[32m'Server'\u001b[39m, value: \u001b[32m'Cowboy'\u001b[39m },\n  {\n    name: \u001b[32m'Report-To'\u001b[39m,\n    value: \u001b[32m'{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1744869612&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=yqXP9r4f%2FC1bqLDoxZsZ0FTsboIrR9tZpgNfBhDAe78%3D\"}]}'\u001b[39m\n  },\n  {\n    name: \u001b[32m'Reporting-Endpoints'\u001b[39m,\n    value: \u001b[32m'heroku-nel=https://nel.heroku.com/reports?ts=1744869612&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=yqXP9r4f%2FC1bqLDoxZsZ0FTsboIrR9tZpgNfBhDAe78%3D'\u001b[39m\n  },\n  {\n    name: \u001b[32m'Nel'\u001b[39m,\n    value: \u001b[32m'{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}'\u001b[39m\n  },\n  { name: \u001b[32m'Connection'\u001b[39m, value: \u001b[32m'keep-alive'\u001b[39m },\n  { name: \u001b[32m'X-Powered-By'\u001b[39m, value: \u001b[32m'Express'\u001b[39m },\n  { name: \u001b[32m'Content-Type'\u001b[39m, value: \u001b[32m'application/json; charset=utf-8'\u001b[39m },\n  { name: \u001b[32m'Content-Length'\u001b[39m, value: \u001b[32m'140'\u001b[39m },\n  { name: \u001b[32m'Etag'\u001b[39m, value: \u001b[32m'W/\"8c-m2wM1ccJXVL9o9PXShPWX5oQLyg\"'\u001b[39m },\n  { name: \u001b[32m'Date'\u001b[39m, value: \u001b[32m'Thu, 17 Apr 2025 06:00:12 GMT'\u001b[39m },\n  { name: \u001b[32m'Via'\u001b[39m, value: \u001b[32m'1.1 vegur'\u001b[39m }\n]\n"
-                    },
-                    {
-                      "text": "Server: Cowboy\n"
-                    },
-                    {
-                      "text": "Report-To: {\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1744869612&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=yqXP9r4f%2FC1bqLDoxZsZ0FTsboIrR9tZpgNfBhDAe78%3D\"}]}\n"
-                    },
-                    {
-                      "text": "Reporting-Endpoints: heroku-nel=https://nel.heroku.com/reports?ts=1744869612&sid=c46efe9b-d3d2-4a0c-8c76-bfafa16c5add&s=yqXP9r4f%2FC1bqLDoxZsZ0FTsboIrR9tZpgNfBhDAe78%3D\n"
-                    },
-                    {
-                      "text": "Nel: {\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}\n"
-                    },
-                    {
-                      "text": "Connection: keep-alive\n"
-                    },
-                    {
-                      "text": "X-Powered-By: Express\n"
-                    },
-                    {
-                      "text": "Content-Type: application/json; charset=utf-8\n"
-                    },
-                    {
-                      "text": "Content-Length: 140\n"
-                    },
-                    {
-                      "text": "Etag: W/\"8c-m2wM1ccJXVL9o9PXShPWX5oQLyg\"\n"
-                    },
-                    {
-                      "text": "Date: Thu, 17 Apr 2025 06:00:12 GMT\n"
-                    },
-                    {
-                      "text": "Via: 1.1 vegur\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-04-17T06:00:12.031Z",
+                  "startTime": "2025-04-17T10:32:14.729Z",
                   "attachments": [
                     {
                       "name": "trace",
                       "contentType": "application/zip",
-                      "path": "C:\\Users\\vvashisht\\Desktop\\Projects\\practiceproject\\test-results\\responseheaderverification-1b52e-nd-validate-response-header-chromium\\trace.zip"
+                      "path": "C:\\Users\\vvashisht\\Desktop\\Projects\\practiceproject\\test-results\\auth_api-authentication-of-put-call-using-basic-auth-chromium\\trace.zip"
                     }
                   ]
                 }
@@ -148,9 +105,9 @@
               "status": "expected"
             }
           ],
-          "id": "99991e6185a0803d5e98-250c3f23e8d07502b10b",
-          "file": "responseheaderverification.spec.ts",
-          "line": 3,
+          "id": "e232ce5f14e6f928df2b-ca765d60458800c18e68",
+          "file": "auth_api.spec.ts",
+          "line": 62,
           "column": 5
         }
       ]
@@ -158,8 +115,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-04-17T06:00:09.776Z",
-    "duration": 3496.239999999998,
+    "startTime": "2025-04-17T10:32:13.673Z",
+    "duration": 2478.384,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
